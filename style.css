@@ -1,0 +1,121 @@
+* {
+  margin: 0;
+  padding: 0;
+  /* box-sizing allows us to include padding & border in an element's totale width & height */
+  box-sizing: border-box;
+  font-family: "Press Start 2P", cursive;
+  color: #e63946;
+}
+
+body {
+  background-color: #a8dadc;
+}
+
+#game-over {
+  display: none;
+  z-index: 2;
+  background-color: rgba(241, 250, 238, 0.5);
+}
+
+#game-board {
+  background-color: #f1faee;
+}
+
+#game-over,
+#game-board {
+  position: absolute;
+  border-radius: 0.2rem;
+  border: 2px solid #1d3557;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  /* Puts it in middle of page */
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 600px;
+}
+
+#game-over-sign {
+  position: relative;
+  text-align: center;
+  bottom: -50%;
+}
+
+#final-score {
+  position: relative;
+  text-align: center;
+  bottom: -55%;
+}
+
+.brick {
+  position: absolute;
+  width: 60px;
+  height: 20px;
+  background-color: #457b8d;
+}
+
+.paddle {
+  position: absolute;
+  width: 75px;
+  height: 20px;
+  background-color: #1d3557;
+}
+
+.ball {
+  position: absolute;
+  width: 15px; /* originally 20px */
+  height: 15px; /* originally 20px */
+  background-color: #e63946;
+  border-radius: 10px;
+}
+
+.life {
+  position: absolute;
+  width: 12px;
+  height: 20px;
+  background-color: #e63946;
+  /*left: 65%;  to move heart left & right */
+  bottom: 1%;
+  transform: rotate(45deg);
+  border-radius: 100px 100px 7px 0;
+}
+
+.life::before {
+  position: absolute;
+  width: 12px;
+  height: 20px;
+  background-color: inherit;
+  content: "";
+  transform: rotate(90deg);
+  left: -35%;
+  top: 19%;
+  border-radius: 0 7px 100px 100px;
+}
+
+#score {
+  position: absolute;
+  bottom: 1%;
+  left: 1%;
+}
+
+.title {
+  position: relative;
+  top: -9%;
+  text-align: center;
+}
+
+#start-game {
+  position: relative;
+  top: 100%;
+  left: 50%;
+  padding: 10px;
+  background-color: #f1faee;
+  border-radius: 0.2rem;
+  border: 2px solid #1d3557;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+}
+
+#start-game:hover {
+  padding: 12px;
+}
